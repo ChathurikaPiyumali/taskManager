@@ -1,6 +1,6 @@
 # 🧩 Task Manager App – Full-Stack Intern Assignment (Treinetic 2025)
 
-This is a full-stack task manager web application built with **Angular** (frontend) and **Spring Boot** (backend). It allows users to create, view, edit, and delete tasks stored in a ** **MongoDB** database.
+This is a full-stack task manager web application built with **Angular** (frontend) and **Spring Boot** (backend). It allows users to create, view, edit, and delete tasks stored in a  **MongoDB** database.
 
 ---
 
