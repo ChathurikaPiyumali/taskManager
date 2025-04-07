@@ -1,0 +1,36 @@
+<div class="task-list-container">
+  <h2 class="heading">Task List</h2>
+
+  <!-- Optional: Filter Controls -->
+  <div class="filters">
+    <label for="statusFilter">Filter by status:</label>
+    <select id="statusFilter" [(ngModel)]="statusFilter">
+      <option value="">All</option>
+      <option value="TO_DO">TO_DO</option>
+      <option value="IN_PROGRESS">IN_PROGRESS</option>
+      <option value="DONE">DONE</option>
+    </select>
+  </div>
+
+  <!-- Task Cards -->
+  <div *ngIf="filteredTasks.length > 0; else noTasks" class="task-list">
+    <div *ngFor="let task of filteredTasks" class="task-card">
+      <div class="task-header">
+        <h3>{{ task.title }}</h3>
+        <span class="status" [ngClass]="task.status">{{ task.status }}</span>
+      </div>
+      <p class="description">{{ task.description }}</p>
+      <div class="task-footer">
+        <span class="timestamp">{{ task.createdAt | date: 'short' }}</span>
+        <div class="actions">
+          <button (click)="onEdit(task)">Edit</button>
+          <button (click)="deleteTask(task.id!)" *ngIf="task.id">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #noTasks>
+    <p class="empty-message">No tasks found.</p>
+  </ng-template>
+</div>

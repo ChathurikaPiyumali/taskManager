@@ -1,0 +1,11 @@
+<div class="app-container">
+  <app-task-form
+    [taskToEdit]="taskToEdit"
+    (taskSaved)="onTaskSaved()">
+  </app-task-form>
+
+  <app-task-list
+    [taskToEdit]="taskToEdit"
+    (editTask)="onEditTask($event)">
+  </app-task-list>
+</div>
