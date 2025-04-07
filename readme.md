@@ -19,9 +19,9 @@ This is a full-stack task manager web application built with **Angular** (fronte
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: Angular (Reactive Forms, Angular Routing, HttpClient)
-- **Backend**: Spring Boot (Spring Data JPA or MongoDB)
-- **Database**: MySQL or MongoDB
+- **Frontend**: Angular 
+- **Backend**: Spring Boot 
+- **Database**: MongoDB
 
 ---
 
